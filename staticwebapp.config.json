@@ -1,0 +1,15 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/img/*", "/css/*", "/js/*", "*.ico", "*.svg", "*.png", "*.jpg", "*.webp", "*.woff2"]
+  },
+  "routes": [
+    { "route": "/contato",      "rewrite": "/contato.html" },
+    { "route": "/orcamento",    "rewrite": "/orcamento.html" },
+    { "route": "/consultar-os", "rewrite": "/consultar-os.html" },
+    { "route": "/consultar",    "rewrite": "/consultar.html" }
+  ],
+  "responseOverrides": {
+    "404": { "rewrite": "/index.html", "statusCode": 200 }
+  }
+}

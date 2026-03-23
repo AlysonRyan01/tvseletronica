@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TVS Eletrônica | Assistência Técnica em Campo Largo</title>
+  <meta name="description" content="Assistência técnica especializada em televisores em Campo Largo/PR. +30 anos, autorizada Philco e Britânia. Orçamento gratuito." />
+  <link rel="icon" type="image/x-icon"  href="img/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="page-loader"><div class="loader-mark">TVS<em>.</em></div></div>
+<div id="toast-container" class="toast-wrap"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="site-logo">
+      <img src="img/tvs-logo.png"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+           class="logo-img" alt="TVS Eletrônica" />
+      <span class="logo-text" style="display:none">TVS<em>.</em></span>
+    </a>
+    <nav class="site-nav">
+      <a href="/"        class="nav-link active">Início</a>
+      <a href="/contato"      class="nav-link">Contato</a>
+      <a href="/consultar-os" class="nav-link">Consultar OS</a>
+      <a href="/orcamento"    class="btn-cta-nav">Orçamento</a>
+    </nav>
+    <button id="hamburger" class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div id="mobile-drawer" class="mobile-drawer">
+  <div id="drawer-back" class="drawer-back"></div>
+  <div class="drawer-panel">
+    <button id="drawer-close" class="drawer-close">&#x2715;</button>
+    <img src="img/tvs-logo.png"
+         onerror="this.style.display='none'" class="drawer-logo" alt="TVS" />
+    <nav class="drawer-nav">
+      <a href="/"        class="drawer-link">Início</a>
+      <a href="/contato"      class="drawer-link">Contato</a>
+      <a href="/consultar-os" class="drawer-link">Consultar OS</a>
+      <a href="/orcamento"    class="drawer-link">Solicitar Orçamento →</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero__grid container">
+    <!-- Left -->
+    <div class="hero__left">
+      <div class="hero__eyebrow">
+        <span class="hero__eyebrow-line"></span>
+        Campo Largo · Desde 1993
+      </div>
+
+      <h1 class="hero__title">
+        Assistência<br>
+        Técnica<br>
+        <em>Especializada</em>
+      </h1>
+
+      <p class="hero__desc">
+        Conserto profissional de televisores com orçamento gratuito,
+        peças originais e garantia de serviço. Autorizada Philco e Britânia.
+      </p>
+
+      <div class="hero__actions">
+        <a href="/orcamento" class="btn btn--solid btn--lg">Solicitar Orçamento</a>
+        <a href="/contato"   class="btn btn--outline btn--lg">Fale Conosco</a>
+      </div>
+    </div>
+
+    <!-- Right — TV visual -->
+    <div class="hero__right">
+      <div class="hero__right-bg"></div>
+      <div class="hero__right-noise"></div>
+      <div class="tv-scene">
+        <div class="tv-body">
+          <div class="tv-screen">
+            <div class="tv-content">
+              <div class="tv-line tv-line--red"></div>
+              <div class="tv-line tv-line--mid"></div>
+              <div class="tv-line tv-line--short"></div>
+              <div class="tv-line" style="width:65%"></div>
+              <div class="tv-line" style="width:45%;margin-top:8px"></div>
+              <div class="tv-line tv-line--mid"></div>
+            </div>
+            <div class="tv-logo-on-screen">TVS</div>
+          </div>
+          <div class="tv-led"></div>
+        </div>
+        <div class="tv-neck"></div>
+        <div class="tv-base"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="hero__stats container" style="padding-left:0;padding-right:0">
+    <div class="hero__stat">
+      <div class="hero__stat-num" data-counter data-target="1000" data-suffix="+" data-prefix="+">+1.000</div>
+      <div class="hero__stat-label">Vendas realizadas</div>
+    </div>
+    <div class="hero__stat">
+      <div class="hero__stat-num" data-counter data-target="65000" data-suffix="+" data-prefix="+">+65.000</div>
+      <div class="hero__stat-label">Ordens de serviço</div>
+    </div>
+    <div class="hero__stat">
+      <div class="hero__stat-num">30+</div>
+      <div class="hero__stat-label">Anos de experiência</div>
+    </div>
+    <div class="hero__stat">
+      <div class="hero__stat-num">100%</div>
+      <div class="hero__stat-label">Peças originais</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / HISTORY ===== -->
+<section class="about">
+  <div class="container">
+    <div class="about__grid">
+      <!-- Left text -->
+      <div class="reveal-left">
+        <span class="section-label">Nossa Trajetória</span>
+        <h2 class="section-title">Nossa<br>História</h2>
+        <p class="section-sub">Excelência em assistência técnica de TVs há mais de 30 anos em Campo Largo, Paraná.</p>
+
+        <div class="about__body">
+          <p>Desde 1993, a TVS Eletrônica é referência em conserto e venda de televisores em Campo Largo. Nossa trajetória é marcada por soluções técnicas confiáveis e atendimento personalizado.</p>
+          <p>Nosso compromisso vai além do conserto — buscamos a satisfação total do cliente com atendimento ágil, soluções eficientes e serviço técnico de confiança.</p>
+        </div>
+
+        <div class="about__certs">
+          <span class="cert-tag">Assistência Autorizada Philco</span>
+          <span class="cert-tag">Assistência Autorizada Britânia</span>
+          <span class="cert-tag">Laudos Técnicos COCEL / COPEL</span>
+          <span class="cert-tag">Seguradoras</span>
+        </div>
+
+        <div class="about__address">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <p>Rua Centenário, 1531 — Centro<br>Campo Largo / PR — CEP 83601-000</p>
+        </div>
+      </div>
+
+      <!-- Right achievements -->
+      <div class="reveal-right">
+        <div class="about__right">
+          <div class="achiev-item">
+            <div class="achiev-num" data-counter data-target="1000" data-suffix="+" data-prefix="+">+1.000</div>
+            <div class="achiev-divider"></div>
+            <div class="achiev-text">
+              <strong>Vendas Realizadas</strong>
+              Televisores revisados e certificados entregues aos clientes.
+            </div>
+          </div>
+          <div class="achiev-item">
+            <div class="achiev-num" data-counter data-target="65000" data-suffix="+" data-prefix="+">+65.000</div>
+            <div class="achiev-divider"></div>
+            <div class="achiev-text">
+              <strong>Ordens de Serviço</strong>
+              Equipamentos consertados com qualidade e garantia.
+            </div>
+          </div>
+          <div class="achiev-item">
+            <div class="achiev-num">1993</div>
+            <div class="achiev-divider"></div>
+            <div class="achiev-text">
+              <strong>Ano de Fundação</strong>
+              Mais de três décadas servindo Campo Largo com excelência.
+            </div>
+          </div>
+        </div>
+
+        <div class="about__quote">
+          <p>"Qualidade e confiança que se comprovam a cada serviço realizado."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services">
+  <div class="container">
+    <div class="services__header">
+      <div>
+        <span class="section-label" style="color:var(--red)">O que fazemos</span>
+        <h2 class="section-title section-title--white">Nossos<br>Diferenciais</h2>
+      </div>
+      <p class="section-sub">Excelência em produtos e serviços para sua televisão em Campo Largo.</p>
+    </div>
+
+    <div class="services__grid reveal">
+      <!-- Card 1 -->
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div class="service-title">Venda de TVs</div>
+        <p class="service-text">Televisores revisados e certificados com garantia de 1 ano. Produtos testados e com garantia estendida.</p>
+        <div class="service-tags">
+          <span class="service-tag">Produtos testados</span>
+          <span class="service-tag">Garantia 1 ano</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="service-title">Assistência Técnica</div>
+        <p class="service-text">Autorizados Philco e Britânia. Técnicos certificados com peças originais de fábrica.</p>
+        <div class="service-tags">
+          <span class="service-tag">Peças originais</span>
+          <span class="service-tag">Autorizada Philco</span>
+          <span class="service-tag">Autorizada Britânia</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <div class="service-title">Agilidade no Serviço</div>
+        <p class="service-text">Diagnóstico rápido e orçamento em até 24h. Entrega ágil e sem complicações para o cliente.</p>
+        <div class="service-tags">
+          <span class="service-tag">Diagnóstico rápido</span>
+          <span class="service-tag">Orçamento gratuito</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="whyus">
+  <div class="container">
+    <div class="whyus__grid">
+      <div class="why-item reveal" data-delay="0">
+        <div class="why-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <div class="why-title">Garantia de serviço</div>
+        <div class="why-text">Todo conserto realizado tem garantia. Trabalhamos com responsabilidade técnica.</div>
+      </div>
+      <div class="why-item reveal" data-delay="100">
+        <div class="why-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div class="why-title">Orçamento gratuito</div>
+        <div class="why-text">Diagnóstico e orçamento sem custo. Você decide se aprova ou não o serviço.</div>
+      </div>
+      <div class="why-item reveal" data-delay="200">
+        <div class="why-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="why-title">Equipe especializada</div>
+        <div class="why-text">Técnicos certificados com anos de experiência em manutenção de TVs de todas as marcas.</div>
+      </div>
+      <div class="why-item reveal" data-delay="300">
+        <div class="why-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+          </svg>
+        </div>
+        <div class="why-title">Peças originais</div>
+        <div class="why-text">Trabalhamos exclusivamente com componentes originais para garantir durabilidade e qualidade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="contact__grid">
+      <!-- Info -->
+      <div class="reveal-left">
+        <span class="section-label">Atendimento</span>
+        <h2 class="section-title">Fale<br>Conosco</h2>
+        <p class="section-sub">Estamos prontos para atender suas necessidades com excelência técnica e agilidade.</p>
+
+        <div class="contact-info" style="margin-top:40px">
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-row-label">Endereço</div>
+              <div class="contact-row-value">Rua Centenário, 1531 — Centro<br>Campo Largo/PR — CEP 83601-000</div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-row-label">Telefone</div>
+              <div class="contact-row-value">(41) 3292-3047</div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-row-label">WhatsApp</div>
+              <div class="contact-row-value">(41) 99274-4920</div>
+              <a href="https://wa.me/5541992744920" class="contact-row-link" target="_blank" rel="noopener">
+                Abrir conversa →
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-row-label">E-mail</div>
+              <div class="contact-row-value">tvseletronica@tvseletronica.com.br</div>
+              <a href="mailto:tvseletronica@tvseletronica.com.br" class="contact-row-link">
+                Enviar e-mail →
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-row-label">Horário</div>
+              <div class="hours-grid" style="margin-top:2px">
+                <div class="hours-item"><strong>Seg — Sex</strong>09h–12h / 13h–18h</div>
+                <div class="hours-item"><strong>Sábado</strong>09h–12h</div>
+                <div class="hours-item"><strong>Domingo</strong>Fechado</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal-right">
+        <div class="form-card">
+          <div class="form-card-title">Envie uma<br><span>Mensagem</span></div>
+          <form id="home-form">
+            <div class="form-group">
+              <label class="form-label" for="hf-name">Nome completo</label>
+              <input id="hf-name" name="name" type="text" class="form-input" placeholder="Seu nome" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="hf-phone">Telefone</label>
+                <input id="hf-phone" name="phone" type="tel" class="form-input" placeholder="(41) 9 9999-9999" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="hf-email">E-mail</label>
+                <input id="hf-email" name="email" type="email" class="form-input" placeholder="seu@email.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hf-msg">Mensagem</label>
+              <textarea id="hf-msg" name="message" class="form-textarea" rows="5" placeholder="Como podemos ajudá-lo?"></textarea>
+            </div>
+            <button id="home-form-btn" type="submit" class="btn btn--solid" style="width:100%">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">TVS<em>.</em></div>
+        <p class="footer-brand-desc">Assistência técnica especializada em televisores desde 1993 em Campo Largo, PR.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navegação</p>
+        <div class="footer-links">
+          <a href="/"        class="footer-link">Início</a>
+          <a href="/contato"      class="footer-link">Contato</a>
+          <a href="/orcamento"    class="footer-link">Orçamento</a>
+          <a href="/consultar-os" class="footer-link">Consultar OS</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Contato</p>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            (41) 3292-3047
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            tvseletronica@tvseletronica.com.br
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Horário</p>
+        <div class="footer-hours-list">
+          <div class="footer-hours-item">Seg–Sex: 9h às 18h</div>
+          <div class="footer-hours-item">Sábado: 9h às 12h</div>
+          <div class="footer-hours-item" style="color:rgba(255,255,255,.2)">Domingo: Fechado</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-secure">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Site seguro
+      </div>
+      <p>© 2025 TVS Eletrônica. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/api.js"></script>
+<script>
+  handleContactForm({ formId:'home-form', btnId:'home-form-btn', subject:'Contato via site' });
+</script>
+</body>
+</html>
