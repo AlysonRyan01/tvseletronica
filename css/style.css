@@ -276,7 +276,7 @@ input,textarea,select{font-family:var(--body)}
 /* ================================================================
    ABOUT / HISTORY
    ================================================================ */
-.about{padding:120px 0;background:var(--cream)}
+.about{padding:120px 0;background:var(--cream);overflow:hidden}
 .about__grid{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
 .about__left .section-sub{max-width:100%}
 .about__body{font-size:15px;font-weight:300;line-height:1.9;color:#555;margin-top:24px}
@@ -305,7 +305,7 @@ input,textarea,select{font-family:var(--body)}
 }
 .achiev-item:last-child{border-bottom:none}
 .achiev-item:hover{background:var(--cream)}
-.achiev-num{font-family:var(--display);font-size:44px;font-weight:700;font-style:italic;line-height:1;color:var(--red);min-width:120px}
+.achiev-num{font-family:var(--display);font-size:44px;font-weight:700;font-style:italic;line-height:1;color:var(--red);min-width:110px;font-variant-numeric:tabular-nums}
 .achiev-divider{width:1px;height:36px;background:var(--border-lt);flex-shrink:0}
 .achiev-text{font-size:14px;font-weight:400;color:var(--mute);line-height:1.6}
 .achiev-text strong{display:block;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:2px}
@@ -621,6 +621,9 @@ input,textarea,select{font-family:var(--body)}
 .reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .6s ease,transform .6s ease}
 .reveal-right{opacity:0;transform:translateX(32px);transition:opacity .6s ease,transform .6s ease}
 .reveal.on,.reveal-left.on,.reveal-right.on{opacity:1;transform:none}
+@media(max-width:768px){
+  .reveal-left,.reveal-right{transform:translateY(24px)}
+}
 
 /* ================================================================
    RESPONSIVE
