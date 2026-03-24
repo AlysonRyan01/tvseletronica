@@ -653,9 +653,9 @@ input,textarea,select{font-family:var(--body)}
   .form-row{grid-template-columns:1fr}
   .order-actions{flex-direction:column}
   .about__address{max-width:100%;box-sizing:border-box;word-break:break-word}
-  .achiev-item{padding:20px 16px;gap:12px}
-  .achiev-num{font-size:32px;min-width:80px}
-  .achiev-divider{height:28px}
+  .achiev-item{flex-direction:column;align-items:flex-start;padding:20px 16px;gap:8px}
+  .achiev-num{font-size:36px;min-width:0}
+  .achiev-divider{display:none}
   .order-actions .btn-reject,.order-actions .btn-approve{justify-content:center}
   .footer-top{grid-template-columns:1fr}
   .footer-top>:first-child{grid-column:auto}
