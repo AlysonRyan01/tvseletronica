@@ -297,7 +297,7 @@ input,textarea,select{font-family:var(--body)}
 }
 .cert-tag:hover{border-color:var(--red);color:var(--red)}
 
-.about__right{display:flex;flex-direction:column;border:1px solid var(--border-lt);border-radius:var(--r-md);overflow:hidden;background:var(--white);box-shadow:var(--shadow)}
+.about__right{display:flex;flex-direction:column;border:1px solid var(--border-lt);border-radius:var(--r-md);overflow:hidden;background:var(--white);box-shadow:var(--shadow);max-width:100%}
 .achiev-item{
   background:var(--white);padding:32px 28px;
   display:flex;align-items:center;gap:20px;
@@ -652,6 +652,10 @@ input,textarea,select{font-family:var(--body)}
   .whyus__grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .order-actions{flex-direction:column}
+  .about__address{max-width:100%;box-sizing:border-box;word-break:break-word}
+  .achiev-item{padding:20px 16px;gap:12px}
+  .achiev-num{font-size:32px;min-width:80px}
+  .achiev-divider{height:28px}
   .order-actions .btn-reject,.order-actions .btn-approve{justify-content:center}
   .footer-top{grid-template-columns:1fr}
   .footer-top>:first-child{grid-column:auto}
