@@ -2,12 +2,6 @@
    TVS Eletrônica — Main JS v2
    ================================================================ */
 
-/* ---- Page Loader ---- */
-window.addEventListener('load', () => {
-  const loader = document.getElementById('page-loader');
-  if (loader) setTimeout(() => loader.classList.add('gone'), 200);
-});
-
 /* ---- Mobile Navigation ---- */
 (function () {
   const btn      = document.getElementById('hamburger');

@@ -622,12 +622,6 @@ input,textarea,select{font-family:var(--body)}
 .reveal-right{opacity:0;transform:translateX(32px);transition:opacity .6s ease,transform .6s ease}
 .reveal.on,.reveal-left.on,.reveal-right.on{opacity:1;transform:none}
 
-#page-loader{position:fixed;inset:0;z-index:9999;background:var(--black);display:flex;align-items:center;justify-content:center;transition:opacity .4s ease,visibility .4s ease}
-#page-loader.gone{opacity:0;visibility:hidden}
-.loader-mark{font-family:var(--display);font-size:40px;font-weight:700;color:var(--white)}
-.loader-mark em{font-style:italic;color:var(--red);animation:blink 1s ease infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-
 /* ================================================================
    RESPONSIVE
    ================================================================ */
