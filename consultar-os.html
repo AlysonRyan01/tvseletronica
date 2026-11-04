@@ -183,8 +183,8 @@
 <script>
   handleContactForm({
     formId:'consulta-form', btnId:'consulta-btn', subject:'Consulta de OS',
-    buildBody({name,phone,email,message}){
-      return `Nome: ${name}\nTelefone: ${phone}\nEmail: ${email||'Não informado'}\nOrdem de Serviço: ${message}`;
+    buildMessage({message}){
+      return `Ordem de Serviço: ${message}`;
     },
   });
 </script>

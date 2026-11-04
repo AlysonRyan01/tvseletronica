@@ -3,7 +3,6 @@
    ===================================================== */
 
 const API = {
-  EMAIL_BASE: "https://tvs-api.azurewebsites.net/",
   OS_BASE: "https://gerenciamentotvsapi-f7e9dyhyfbhrbpa8.brazilsouth-01.azurewebsites.net/",
   TIMEOUT: 60_000,
 
@@ -15,7 +14,10 @@ const API = {
         ...options,
         signal: controller.signal,
         headers: {
-          "Content-Type": "application/json",
+          // FormData define o próprio Content-Type (multipart com boundary)
+          ...(options.body instanceof FormData
+            ? {}
+            : { "Content-Type": "application/json" }),
           ...(options.headers || {}),
         },
       });
@@ -50,11 +52,18 @@ const API = {
     }
   },
 
-  /* ---- Email ---- */
-  async sendEmail({ name, subject, body, attachments = [] }) {
-    return this._fetch(this.EMAIL_BASE, "api/contato", {
+  /* ---- WhatsApp (contato do site → WhatsApp da loja) ---- */
+  async sendWhatsApp({ subject, name, phone, email, message, files = [] }) {
+    const fd = new FormData();
+    fd.append("subject", subject || "");
+    fd.append("name", name);
+    fd.append("phone", phone);
+    fd.append("email", email || "");
+    fd.append("message", message || "");
+    files.forEach((f) => fd.append("files", f, f.name));
+    return this._fetch(this.OS_BASE, "v1/whatsapp/site-contact", {
       method: "POST",
-      body: JSON.stringify({ name, subject, body, attachments }),
+      body: fd,
     });
   },
 
@@ -83,22 +92,6 @@ const API = {
 
 window.API = API;
 
-/* ---- File to Base64 helper ---- */
-async function fileToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () =>
-      resolve({
-        fileName: file.name,
-        contentType: file.type,
-        base64: reader.result.split(",")[1],
-      });
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-window.fileToBase64 = fileToBase64;
-
 /* ---- Contact Form Handler (shared) ---- */
 async function handleContactForm({
   formId,
@@ -106,7 +99,7 @@ async function handleContactForm({
   subject,
   onSuccess,
   extraValidation,
-  buildBody,
+  buildMessage,
   attachments,
 }) {
   const form = document.getElementById(formId);
@@ -139,17 +132,15 @@ async function handleContactForm({
     spinnerEl.style.margin = "8px auto";
     btn.parentNode.insertBefore(spinnerEl, btn.nextSibling);
 
-    const body = buildBody
-      ? buildBody({ name, phone, email, message })
-      : `Nome: ${name}\nTelefone: ${phone}\nEmail: ${email || "Não informado"}\nMensagem: ${message}`;
+    const files = attachments ? attachments() : [];
 
-    const files = attachments ? await attachments() : [];
-
-    const result = await API.sendEmail({
-      name,
+    const result = await API.sendWhatsApp({
       subject,
-      body,
-      attachments: files,
+      name,
+      phone,
+      email,
+      message: buildMessage ? buildMessage({ message }) : message,
+      files,
     });
 
     spinnerEl.remove();

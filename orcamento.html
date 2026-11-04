@@ -163,7 +163,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            <p>Tamanho máximo por arquivo: 10 MB</p>
+            <p>Até 10 arquivos · 10 MB por arquivo · 25 MB no total</p>
           </div>
 
           <button id="orcamento-btn" type="submit" class="btn btn--solid" style="width:100%">
@@ -207,17 +207,20 @@
       if(!m){Toast.error('Descreva o defeito da TV.');return false}
       if(!e.files.length){Toast.error('Anexe ao menos uma foto da etiqueta.');return false}
       if(!d.files.length){Toast.error('Anexe ao menos uma foto ou vídeo do defeito.');return false}
-      for(const f of[...e.files,...d.files])
+      const all=[...e.files,...d.files];
+      if(all.length>10){Toast.error('Envie no máximo 10 arquivos.');return false}
+      for(const f of all)
         if(f.size>10*1024*1024){Toast.error(`"${f.name}" excede 10 MB.`);return false}
+      if(all.reduce((t,f)=>t+f.size,0)>25*1024*1024){Toast.error('Os arquivos somam mais de 25 MB.');return false}
       return true;
     },
-    buildBody({name,phone,email,message}){
-      return `Nome: ${name}\nTelefone: ${phone}\nEmail: ${email||'Não informado'}\n\nDefeito:\n${message}`;
+    buildMessage({message}){
+      return `Defeito:\n${message}`;
     },
-    async attachments(){
+    attachments(){
       const e=document.getElementById('up-etiqueta');
       const d=document.getElementById('up-defeito');
-      return await Promise.all([...e.files,...d.files].map(f=>fileToBase64(f)));
+      return [...e.files,...d.files];
     },
   });
 </script>
