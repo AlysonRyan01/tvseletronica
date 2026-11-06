@@ -3,7 +3,7 @@
    ===================================================== */
 
 const API = {
-  OS_BASE: "https://gerenciamentotvsapi-f7e9dyhyfbhrbpa8.brazilsouth-01.azurewebsites.net/",
+  OS_BASE: "https://gerenciamento.tvseletronica.com/api/",
   TIMEOUT: 60_000,
 
   async _fetch(base, path, options = {}) {
